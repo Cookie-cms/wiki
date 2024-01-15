@@ -4,8 +4,12 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Cookie wiki",
   description: "How setup",
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    editLink: {
+      pattern: 'https://github.com/Cookie-cms/wiki/edit/main/:path'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Install', link: '/installation' },
