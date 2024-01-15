@@ -23,7 +23,7 @@ export default defineConfig({
         items: [
           { text: 'Installation site', link: '/installation' },
           { text: 'Installation bot', link: '/installationb' },
-          { text: 'Q&A', link: '/QA' },
+          { text: 'Q&A', link: '/qa' },
           { text: 'Api', link: '/api' }
         ]
       }
