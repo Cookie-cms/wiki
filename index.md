@@ -3,23 +3,46 @@
 layout: home
 
 hero:
-  name: "Cookie wiki"
-  text: "How setup"
-  # tagline: My great project tagline
+  name: "Cookiecms"
+  text: "Cms for minecraft projects"
+  tagline: My great project tagline
   actions:
     - theme: brand
-      text: Get started
-      link: /installation
+      text: Installation
+      link: /1.0/
     - theme: alt
-      text: Api
-      link: /api
+      text: API
+      link: /1.0/
 
-# features:
-#   - title: Feature A
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature B
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature C
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+features:
+  - title: Feature A
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature B
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature C
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/88631273?v=4',
+    name: 'Coffeewithoutsugar',
+    title: 'Devloper',
+    links: [
+      { icon: 'github', link: 'https://github.com/Wonkiest29' },
+      { icon: 'discord', link: 'https://discord.gg/3ggAmneTss' }
+    ]
+  },
+]
+</script>
+
+
+
+Our Team
+
+Say hello to our awesome team.
+
+<VPTeamMembers size="small" :members="members" />
