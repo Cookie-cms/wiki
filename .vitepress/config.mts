@@ -42,6 +42,7 @@ export default defineConfig({
           { text: 'Skin logic', link: '/dev/skinlogic', },
           { text: 'Discord auth', link: '/dev/discord', },
           { text: 'Verify codes', link: '/dev/verifycodes', },
+          { text: 'How install private pkg?', link: '/dev/package', },
         ]
       }
     ],
