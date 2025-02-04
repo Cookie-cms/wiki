@@ -131,3 +131,15 @@ if user want register new account
     "data": {}
 }
 ```
+
+```mermaid
+flowchart TD
+    A[Frontend: Auth with Discord] --> B[Backend: Get Discord User]
+    B --> C{Has Account?}
+    C -->|Yes| D[Return JWT]
+    C -->|No| E{User Choice}
+    E -->|Link Account| F[Login & Link]
+    E -->|Register New| G[Create Account]
+    F --> D
+    G --> D
+```

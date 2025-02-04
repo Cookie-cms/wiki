@@ -1,16 +1,12 @@
-import { defineConfig } from 'vitepress'
+// filepath: /home/misha/code/cookiecms/wiki2/.vitepress/config.mts
+// import { defineConfig } from 'vitepress'
+import { withMermaid } from "vitepress-plugin-mermaid";
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   title: "CookieCMS",
   description: "Wiki",
   lastUpdated: true,
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    // nav: [
-    //   { text: 'Home', link: '/' },
-    //   { text: 'Examples', link: '/markdown-examples' }
-    // ],
     search: {
       provider: 'local'
     },
@@ -21,7 +17,7 @@ export default defineConfig({
         items: [
           { text: 'SimpleCabinet (Deprecated)', link: 'https://github.com/Cookie-cms/simplecabinet' },
           { text: '1-beta', link: '/1-beta' },
-          { text: '2-beta', link: '/2-beta', }
+          { text: '2-beta', link: '/2-beta' }
         ]
       },
       {
@@ -29,9 +25,9 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Template engine', link: '/things/templateengine' },
-          { text: 'Fixed 2d skin', link: '/things/2dskin', },
-          { text: 'Simple-code', link: '/things/simplecode', },
-          { text: 'Admin-access', link: '/things/adminaccess', }
+          { text: 'Fixed 2d skin', link: '/things/2dskin' },
+          { text: 'Simple-code', link: '/things/simplecode' },
+          { text: 'Admin-access', link: '/things/adminaccess' }
         ]
       },
       {
@@ -47,14 +43,11 @@ export default defineConfig({
           { text: 'Verify codes', link: '/dev/verifycodes', },
           { text: 'How install private pkg?', link: '/dev/package', },
         ]
-      }
+      },
     ],
-    editLink: {
-      pattern: 'https://github.com/cookie-cms/wiki/:path'
-    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Cookie-cms' },
       { icon: 'discord', link: 'https://discord.gg/4YQ3hNVm8P' }
     ]
-  }
+  },
 })
