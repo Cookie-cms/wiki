@@ -64,7 +64,6 @@ link via login
 ```
 
 
-
 - **200 OK**:
 ```json
 {
@@ -81,10 +80,53 @@ link via login
 ```
 
 - **409 Conflict**:
+
 ```json
 {
     "error": true,
     "msg": "This game account already linked to another discord account",
+    "url": null,
+    "data": {}
+}
+```
+
+
+
+
+if user want register new account
+
+`POST /api/auth/register/discord`
+
+**Request Body**:
+
+```json
+{
+    "meta": {
+        "id": "string",
+        "conn_id": 0
+    }
+}
+```
+
+**Response**:
+
+- **200 OK**:
+```json
+{
+    "error": false,
+    "msg": "Login successful",
+    "url": "/home",  // Optional redirect URL
+    "data": {
+        "jwt": "string"  // The JWT token for authenticated requests
+    }
+}
+```
+
+- **400 Bad request**:
+```json
+{
+    "error": true,
+    "msg": "Internal error",
     "url": null,
     "data": {}
 }

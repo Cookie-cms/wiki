@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "CookieCMS",
   description: "Wiki",
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // nav: [
@@ -46,7 +47,9 @@ export default defineConfig({
         ]
       }
     ],
-
+    editLink: {
+      pattern: 'https://github.com/cookie-cms/wiki/:path'
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
