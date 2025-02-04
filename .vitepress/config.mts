@@ -3,7 +3,7 @@
 import { withMermaid } from "vitepress-plugin-mermaid";
 
 export default withMermaid({
-  title: "CookieCMS",
+  title: "CookieCMS Wiki",
   description: "Wiki",
   lastUpdated: true,
   themeConfig: {
