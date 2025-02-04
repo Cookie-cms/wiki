@@ -21,5 +21,6 @@ jobs:
 
     - name: Deploy to server
       run: |
-        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no github-deploy@${{ secrets.SERVER_HOST }} "export NVM_DIR=~/.nvm && source ~/.nvm/nvm.sh && nvm use 18 && cd /home/wiki/ && git pull origin main && npm run docs:build"
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "export NVM_DIR=~/.nvm && source ~/.nvm/nvm.sh && nvm use 18 && cd /home/wiki/ && git pull origin main && npm run docs:build"
+      env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
