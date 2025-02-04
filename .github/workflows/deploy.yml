@@ -21,6 +21,6 @@ jobs:
 
     - name: Deploy to server
       run: |
-        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_USER }} "cd /home/wiki/ && git pull origin main && npm run docs:build"
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "cd /home/wiki/ && git pull origin main && npm run docs:build"
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
