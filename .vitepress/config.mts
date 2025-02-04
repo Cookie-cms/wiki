@@ -7,6 +7,25 @@ export default withMermaid({
   description: "Wiki",
   lastUpdated: true,
   themeConfig: {
+    team: [
+      {
+        avatar: 'https://example.com/avatar1.png',
+        name: 'Иван Иванов',
+        title: 'Разработчик',
+        links: [
+          { icon: 'github', link: 'https://github.com/ivan' },
+          { icon: 'twitter', link: 'https://twitter.com/ivan' }
+        ]
+      },
+      {
+        avatar: 'https://example.com/avatar2.png',
+        name: 'Мария Петрова',
+        title: 'Дизайнер',
+        links: [
+          { icon: 'linkedin', link: 'https://linkedin.com/in/maria' }
+        ]
+      }
+    ],
     search: {
       provider: 'local'
     },
@@ -50,4 +69,5 @@ export default withMermaid({
       { icon: 'discord', link: 'https://discord.gg/4YQ3hNVm8P' }
     ]
   },
+  
 })

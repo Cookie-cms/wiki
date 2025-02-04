@@ -23,3 +23,30 @@ hero:
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<script setup>
+  import {
+    VPTeamPage,
+    VPTeamPageTitle,
+    VPTeamMembers
+  } from 'vitepress/theme'
+
+  const members = [
+    {
+      avatar: 'https://avatars.githubusercontent.com/u/88631273?s=400&u=fcc9105b2375274f8f55f83c44a4b260e08de643&v=4',
+      name: 'Coffeewithoutsugar',
+      title: 'Backend Developer',
+      links: [
+        { icon: 'github', link: 'https://github.com/wonkiest29' },
+      ]
+    },
+    {
+      avatar: 'https://avatars.githubusercontent.com/u/142260596?v=4',
+      name: 'Vakood',
+      title: 'Frontend Developer',
+      links: [
+        { icon: 'github', link: 'https://github.com/Vakood' }      ]
+    }
+  ]
+</script>
+
+  <VPTeamMembers :members="members" />
