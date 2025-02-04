@@ -38,7 +38,9 @@ export default defineConfig({
         text: 'Development',
         collapsed: false,
         items: [
+          { text: 'Installation', link: '/dev/installation' },
           { text: 'Api', link: '/dev' },
+          { text: 'Configuration', link: '/dev/configuration' },
           { text: 'User permissions lvl', link: '/dev/usrpermlvl', },
           { text: 'Skin logic', link: '/dev/skinlogic', },
           { text: 'Discord auth', link: '/dev/discord', },
