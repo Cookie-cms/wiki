@@ -53,7 +53,8 @@ export default defineConfig({
       pattern: 'https://github.com/cookie-cms/wiki/:path'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/Cookie-cms' },
+      { icon: 'discord', link: 'https://discord.gg/4YQ3hNVm8P' }
     ]
   }
 })
