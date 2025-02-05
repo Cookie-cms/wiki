@@ -6,7 +6,7 @@ Actual on 03.02.2025
 
 All responses from the API will follow the standard format:
 
-```
+```json
 {
     "error": bool,    // Indicates if there was an error (default is false)
     "msg": string,    // A message to describe the result or error
@@ -23,7 +23,7 @@ All responses from the API will follow the standard format:
 `POST /api/auth/login`
 
 **Request Body**:
-```
+```json
 {
     "username": string,   // The username of the user
     "password": string    // The password of the user
@@ -33,7 +33,7 @@ All responses from the API will follow the standard format:
 **Responses**:
 
 - **200 OK**:
-```
+```json
 {
     "error": false,
     "msg": "Login successful",
@@ -45,7 +45,7 @@ All responses from the API will follow the standard format:
 ```
 
 - **401 Unauthorized**:
-```
+```json
 {
     "error": true,
     "msg": "Invalid credentials",
@@ -298,7 +298,7 @@ Password required (min 8 characters)
 
 **Response**:
 - **200 OK**:
-```
+```json
 {
     "error": false,
     "msg": "Logged out successfully",
@@ -308,7 +308,7 @@ Password required (min 8 characters)
 ```
 
 - **401 Unauthorized**:
-```
+```json
 {
     "error": true,
     "msg": "Invalid JWT token",
@@ -329,7 +329,7 @@ Password required (min 8 characters)
 
 
 - **200 OK**:
-```
+```json
 {
     "error": false,
     "msg": "Home data fetched successfully",
@@ -363,7 +363,7 @@ Password required (min 8 characters)
 ```
 
 - **401 Unauthorized**:
-```
+```json
 {
     "error": true,
     "msg": "Invalid JWT token",
@@ -374,7 +374,7 @@ Password required (min 8 characters)
 ---
 
 - **403 Forbidden**:
-```
+```json
 {
     "error": true,
     "msg": "Account is not finished",
@@ -458,7 +458,7 @@ Options can be:
 
 
 - **200 OK**:
-```
+```json
 {
     "error": false,
     "msg": "{Action} successfully",
@@ -468,7 +468,7 @@ Options can be:
 ```
 
 - **400 Bad Request**:
-```
+```json
 {
     "error": true,
     "msg": "{ Action error }",
@@ -479,7 +479,7 @@ Options can be:
 
 
 - **401 Unauthorized**:
-```
+```json
 {
     "error": true,
     "msg": "{ Action error }",
@@ -496,7 +496,7 @@ Options can be:
 - **Authorization**: Bearer `jwt_token
 
 **Request Body form**:
-```
+```json
 {   
     "skin": file
     "slim": "true | false"
@@ -615,7 +615,7 @@ Options can be:
 **Response**:
 
 - **200 OK**:
-```
+```json
 {
     "error": false,
     "msg": "Users fetched successfully",
@@ -630,7 +630,7 @@ Options can be:
 ```
 
 - **403 Forbidden**:
-```
+```json
 {
     "error": true,
     "msg": "You do not have permission to view the user list",
@@ -650,14 +650,14 @@ Options can be:
 **Response**:
 
 - **200 OK**:
-```
+```json
 {
     "error": false,
     "msg": "User details fetched successfully",
     "url": null,
     "data": {
-        "username": string,                // Username of the user
-        "uuid": string,                    // Unique identifier for the user
+        "username": "string",                // Username of the user
+        "uuid": "string",                    // Unique identifier for the user
         "selected_cape": 0,                // ID of the currently selected cape
         "capes": [
             {
@@ -668,20 +668,18 @@ Options can be:
             "discord_id": "int"              // Discord ID of the user
         },
         "mail_verification": true,           // Email verification status
-        "mail": string                     // User's email address
+        "mail": "string"                     // User's email address
     }
 }
 ```
 
 - **403 Forbidden**:
-```
+```json
 {
     "error": true,
     "msg": "You do not have permission to access this user's details",
     "url": null,
-    "
-
-data": {}
+    "data": {}
 }
 ```
 
@@ -695,7 +693,7 @@ data": {}
 - **Authorization**: Bearer `jwt_token`
 
 **Request Body**:
-```
+```json
 {
     "subject": string,       // Subject of the email
     "message": string        // The body content of the email
@@ -705,14 +703,14 @@ data": {}
 **Response**:
 
 - **200 OK**:
-```
+```json
 {
     "msg": "Email sent successfully to all users"
 }
 ```
 
 - **403 Forbidden**:
-```
+```json
 {
     "error": true,
     "msg": "You do not have permission to send emails to all users"
@@ -846,17 +844,17 @@ If the `expired_at` field is not provided, the role update will be permanent for
 - **Authorization**: Bearer `ServiceApiToken`
 
 **Request Body**:
-```
+```json
 {
-    "Discord_id": Int,       // Subject of the email
-    "Playername": string        // The body content of the email
+    "Discord_id": 0,       // Subject of the email
+    "Playername": "string"        // The body content of the email
 }
 ```
 
 **Response**:
 
 - **200 OK**:
-```
+```json
 {
     "discord": {
         "username": "",
@@ -870,7 +868,7 @@ If the `expired_at` field is not provided, the role update will be permanent for
 ```
 
 - **403 Forbidden**:
-```
+```json
 {
     "error": true,
     "msg": "You do not have permission to do this."
@@ -878,52 +876,3 @@ If the `expired_at` field is not provided, the role update will be permanent for
 ```
 
 
-# webhooks
-
-```yml
-AuditSecret: 
-  url: https://
-  spamming: id # here will be send created account
-  audit: id # main information change password change mail etc
-```
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-# BugScout
-
-## **Logger for console**
-
-`WS /ws/debug?type=logger`
-
-nothing send only read information
-
-## **SQL executer**
-`WS /ws/debug?type=sql`
-
-execute and get information which returned
-
-```json
-{
-    "sql": ""
-}
-```
-
-#### **Database func**
-
-`WS /ws/debug?type=database`
-
-```json
-{
-    "data": "tables or {name_of_table}" 
-}
-``` -->

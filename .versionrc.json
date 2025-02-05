@@ -1,0 +1,18 @@
+{
+    "bumpFiles": [
+      {
+        "filename": "package.json",
+        "type": "json"
+      },
+      {
+        "filename": "package-lock.json",
+        "type": "json"
+      }
+    ],
+    "types": [
+      { "type": "feat", "section": "Features", "increment": "minor" },
+      { "type": "fix", "section": "Bug Fixes", "increment": "patch" },
+      { "type": "release", "section": "Releases", "increment": "major" }
+    ]
+  }
+  

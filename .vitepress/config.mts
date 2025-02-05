@@ -55,6 +55,16 @@ export default withMermaid({
         items: [
           { text: 'Installation', link: '/dev/installation' },
           { text: 'Api', link: '/dev' },
+          { text: 'Version rules', link: '/dev/verule' },
+          {
+            text: 'Changes',
+            collapesd: false,
+            items: [
+              // This shows `/guide/index.md` page.
+              { text: 'ChangeLog-backend', link: '/guide/' },
+              { text: 'ChangeLog-Frontend', link: '/guide/' }
+            ]
+          },
           { text: 'Configuration', link: '/dev/configuration' },
           { text: 'User permissions lvl', link: '/dev/usrpermlvl', },
           { text: 'Skin logic', link: '/dev/skinlogic', },

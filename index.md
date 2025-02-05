@@ -37,6 +37,7 @@ hero:
       title: 'Backend Developer',
       links: [
         { icon: 'github', link: 'https://github.com/wonkiest29' },
+        { icon: 'firefoxbrowser', link: 'https://coffeedev.dev/' },
       ]
     },
     {
