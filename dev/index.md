@@ -604,9 +604,9 @@ Options can be:
 
 --- -->
 
-## **Admin Endpoints**
+## **Admin Endpoints** <Badge type="warning" text="WIP" />
 
-### **Users List**
+### **Users List** <Badge type="warning" text="WIP" />
 `GET /api/admin/users`
 
 **Request Headers**:
@@ -641,7 +641,7 @@ Options can be:
 
 ---
 
-### **Get Specific User**
+### **Get Specific User** <Badge type="warning" text="WIP" />
 `GET /api/admin/user/{identifier}`
 
 **Request Headers**:
@@ -686,7 +686,7 @@ Options can be:
 
 
 
-### **Send Mail to All Users**
+### **Send Mail to All Users** <Badge type="warning" text="WIP" />
 `POST /api/admin/mail`
 
 **Request Headers**:
@@ -717,7 +717,8 @@ Options can be:
 }
 ```
 
-### **Update User Role**
+### **Update User Role** <Badge type="warning" text="WIP" />
+
 
 `POST /api/admin/user/role/{identifier}`
 
@@ -779,7 +780,7 @@ If the `expired_at` field is not provided, the role update will be permanent for
 
 ---
 
-### **Update User Role**
+### **Update User Role** <Badge type="warning" text="WIP" />
 
 `POST /api/admin/user/cape/{identifier}`
 
@@ -833,11 +834,11 @@ If the `expired_at` field is not provided, the role update will be permanent for
 
 ---
 
-### **Get all skins**
+### **Get all skins**<Badge type="warning" text="WIP" />
 
 ## **Service Endpoints**
 
-#### **Find user account**
+#### **Find user account** <Badge type="warning" text="WIP" />
 `POST /api/service/user`
 
 **Request Headers**:

@@ -1,4 +1,4 @@
-## User permissions lvl
+## User permissions lvl <Badge type="warning" text="WIP" />
 
 
 |                 | 1 lvl | 2 lvl | 3 lvl |
