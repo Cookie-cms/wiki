@@ -7,25 +7,6 @@ export default withMermaid({
   description: "Wiki",
   lastUpdated: true,
   themeConfig: {
-    team: [
-      {
-        avatar: 'https://example.com/avatar1.png',
-        name: 'Иван Иванов',
-        title: 'Разработчик',
-        links: [
-          { icon: 'github', link: 'https://github.com/ivan' },
-          { icon: 'twitter', link: 'https://twitter.com/ivan' }
-        ]
-      },
-      {
-        avatar: 'https://example.com/avatar2.png',
-        name: 'Мария Петрова',
-        title: 'Дизайнер',
-        links: [
-          { icon: 'linkedin', link: 'https://linkedin.com/in/maria' }
-        ]
-      }
-    ],
     search: {
       provider: 'local'
     },
@@ -61,8 +42,8 @@ export default withMermaid({
             collapesd: false,
             items: [
               // This shows `/guide/index.md` page.
-              { text: 'ChangeLog-backend', link: '/guide/' },
-              { text: 'ChangeLog-Frontend', link: '/guide/' }
+              { text: 'ChangeLog-backend', link: 'dev/changelog-backend.md' },
+              { text: 'ChangeLog-Frontend', link: 'dev/changelog-frontend.md' }
             ]
           },
           { text: 'Configuration', link: '/dev/configuration' },

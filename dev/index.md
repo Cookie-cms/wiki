@@ -1,3 +1,8 @@
+---
+next:
+  text: 'Version Rules'
+  link: '/dev/verule'
+---
 # **API Documentation**
 
 Actual on 03.02.2025
@@ -338,8 +343,8 @@ Password required (min 8 characters)
         "Username": "Coffee",               // The username of the user
         "Uuid": "00000000-0000-0000-0000-000000000000",  // Unique identifier for the user
         "Selected_Cape": 0,                 // ID of the selected cape
-        "Selected_Skin": 0,                 // ID of the selected cape
-        "PermLvl": 0
+        "Selected_Skin": "23bc8c46-987a-44d8-8856-3437563de160",                 // ID of the selected cape
+        "PermLvl": 0,
         "Capes": [
             {
                 "Id": 0,
@@ -354,8 +359,9 @@ Password required (min 8 characters)
         ],     
         "Discord_integration": true,        // Whether the user has Discord integration enabled
         "Discord": {
-            "Discord_Global_Name": "",     // The global Discord username
-            "Discord_Ava": ""              // The Discord avatar URL
+            "userid": "",     // The global Discord username
+            "username": "",              // The Discord avatar URL
+            "avatar": ""             // The Discord avatar URL
         },
         "Mail_verification": true           // Whether the email is verified
     }
@@ -834,7 +840,59 @@ If the `expired_at` field is not provided, the role update will be permanent for
 
 ---
 
-### **Get all skins**<Badge type="warning" text="WIP" />
+## **Get skin/s**<Badge type="warning" text="WIP" />
+
+### **GravitLauncher**
+`GET /api/skin/gravitlauncher/:uuid`
+
+**Response**:
+```json
+{
+  "SKIN": {
+    "url": "http://example.com/skins/Gravita.png",
+    "digest": "SHA256 HASH (HEX)",
+    "metadata": {
+      "model": "slim"
+    }
+  },
+  "CAPE": {
+    "url": "http://example.com/cloaks/Gravita.png",
+    "digest": "SHA256 HASH (HEX)"
+  }
+}
+```
+
+### **Gml**
+- use standard response
+
+### **Head**
+`GET /api/skin/head/:uuid?size=100`
+
+### **Body**
+`GET /api/skin/body/:uuid?size=100`
+
+### **Cloak**
+`GET /api/skin/cloak/:idcloak?size=100`
+
+**Response**:
+- it will cloak file png
+
+### **Standart request skins**
+
+### Skin
+`GET /api/skin/standart/:uuid`
+
+**Response**:
+- it will return file png
+
+### Cape
+`GET /api/skin/standart/cape/:uuid`
+
+**Response**:
+- it will return file png
+
+
+
 
 ## **Service Endpoints**
 
