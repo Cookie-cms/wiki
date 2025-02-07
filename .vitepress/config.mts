@@ -1,11 +1,13 @@
 // filepath: /home/misha/code/cookiecms/wiki2/.vitepress/config.mts
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid";
+import myVitePressPlugin from '../plugins/vitepress-plugin';
 
 export default withMermaid({
   title: "CookieCMS Wiki",
   description: "Wiki",
   lastUpdated: true,
+
   themeConfig: {
     search: {
       provider: 'local'

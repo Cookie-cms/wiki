@@ -894,7 +894,7 @@ If the `expired_at` field is not provided, the role update will be permanent for
 
 
 
-## **Service Endpoints**
+## **Service Endpoints**<Badge type="warning" text="WIP" />
 
 #### **Find user account** <Badge type="warning" text="WIP" />
 `POST /api/service/user`
