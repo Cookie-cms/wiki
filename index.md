@@ -45,7 +45,9 @@ hero:
       name: 'Vakood',
       title: 'Frontend Developer',
       links: [
-        { icon: 'github', link: 'https://github.com/Vakood' }      ]
+        { icon: 'github', link: 'https://github.com/Vakood' },
+        { icon: 'firefoxbrowser', link: 'https://vakood.github.io/vakood.dev' }
+    ]
     }
   ]
 </script>

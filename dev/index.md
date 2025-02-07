@@ -458,6 +458,14 @@ Options can be:
     "skinid": "uuid"
 }
 ```
+
+`POST /api/home/edit/removediscord`
+```json
+{
+    "password": "current_password"
+}
+
+
 **Response**:
 
 - **204 No Content**
