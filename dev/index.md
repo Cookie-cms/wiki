@@ -464,7 +464,7 @@ Options can be:
 {
     "password": "current_password"
 }
-
+```
 
 **Response**:
 
