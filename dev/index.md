@@ -887,19 +887,24 @@ If the `expired_at` field is not provided, the role update will be permanent for
 
 ### **Standart request skins**
 
-### Skin
+### Actual skin
 `GET /api/skin/standart/:uuid`
 
 **Response**:
 - it will return file png
 
-### Cape
+### Actual cape
 `GET /api/skin/standart/cape/:uuid`
 
 **Response**:
 - it will return file png
 
 
+### Skin by name
+`GET /api/skin/public/:uuid`
+
+### Cape by name
+`GET /api/skin/public/cape/:uuid`
 
 
 ## **Service Endpoints**<Badge type="warning" text="WIP" />
