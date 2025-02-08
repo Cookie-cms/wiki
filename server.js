@@ -40,6 +40,7 @@ passport.use(new GitHubStrategy({
     if (isMember) {
     return done(null, profile);
     } else {
+    console.log('Not a member of the required organization');
     return done(null, false, { message: 'Not a member of the required organization' });
     }
   } catch (error) {
