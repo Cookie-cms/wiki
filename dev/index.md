@@ -895,7 +895,9 @@ If the `expired_at` field is not provided, the role update will be permanent for
 - it will return file png
 
 ### Actual cape
+
 **HERE UUID OF USER**
+
 `GET /api/skin/standart/cape/:uuid`
 
 **Response**:
@@ -903,11 +905,15 @@ If the `expired_at` field is not provided, the role update will be permanent for
 
 
 ### Skin by name
+
 **HERE UUID OF FILE**
+
 `GET /api/skin/public/:uuid`
 
 ### Cape by name
+
 **HERE UUID OF FILE**
+
 `GET /api/skin/public/cape/:uuid`
 
 
