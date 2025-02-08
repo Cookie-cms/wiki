@@ -26,6 +26,7 @@ jobs:
             source $NVM_DIR/nvm.sh
             nvm use 20
             cd /home/wiki/
+            git stash
             git pull origin main
             npm run docs:build
           EOF
