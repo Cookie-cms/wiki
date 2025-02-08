@@ -27,5 +27,5 @@ jobs:
             nvm use 20
             cd /home/wiki/
             git pull origin main
-            sudo systemctl restart wiki
+            npm run docs:build
           EOF

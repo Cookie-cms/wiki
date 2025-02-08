@@ -10,6 +10,7 @@ const app = express();
 const protectedRoutes = [
     '/license',
     '/hosting',
+    '/protected'
   ];
 
 app.use(session({
