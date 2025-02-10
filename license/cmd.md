@@ -4,6 +4,7 @@
 - `/addshop <user>` - Add new shop
 - `/lockshop <shopid>` - Remove shop access
 - `/stats` - View global license statistics
+- `/stats <shopid>` - View shop license statistics
 - `/blacklist add <user>` - Add user to blacklist
 - `/blacklist remove <user>` - Remove user from blacklist
 - `/license create <user> <duration>` - Create new license
