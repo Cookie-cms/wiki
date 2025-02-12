@@ -442,7 +442,7 @@ Options can be:
 }
 ```
 
-`POST /api/home/edit/skin`
+`PUT /api/home/edit/skin`
 ```json
 {
     "skinid": "uuid",
@@ -451,6 +451,14 @@ Options can be:
     "cloakid": "uuid"
 }
 ```
+
+`POST /api/home/edit/skin/select`
+```json
+{
+    "skinid": "uuid"
+}
+```
+
 
 `DELETE /api/home/edit/skin`
 ```json
