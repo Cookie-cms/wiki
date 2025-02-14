@@ -429,7 +429,7 @@ Options can be:
 `POST /api/home/mail/request`
 ```json
 {
-    "mail": "mail",
+    "mail": "NewMail",
     "password": "current_password",
 }
 ```
