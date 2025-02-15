@@ -8,11 +8,11 @@ hero:
   # tagline: My great project tagline
   actions:
     - theme: brand
-      text: Devlopment
+      text: Demo
+      link: https://cookiecms.coffeedev.dev/
+    - theme: alt
+      text: Wiki
       link: /dev
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
 
 # features:
 #   - title: Feature A
