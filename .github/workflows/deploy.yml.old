@@ -29,4 +29,5 @@ jobs:
             git stash
             git pull origin main
             npm run docs:build
+            service wiki restart
           EOF
