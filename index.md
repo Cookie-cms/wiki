@@ -50,6 +50,10 @@ hero:
     ]
     }
   ]
+
 </script>
 
   <VPTeamMembers :members="members" />
+
+
+  <!-- <VPTeamMembers :members="sellers" /> -->

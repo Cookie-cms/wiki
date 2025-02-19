@@ -14,9 +14,3 @@
 | Users list      | -     | -     | +     |
 | User            | -     | -     | +     |
 | Mail Spam       | -     | -     | +     |
-
-types of permissions
-
-- ``settings.{name}``
-
-- ``page.{name}``

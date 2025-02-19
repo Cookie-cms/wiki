@@ -854,9 +854,44 @@ If the `expired_at` field is not provided, the role update will be permanent for
 }
 ```
 
----
 
-## **Get skin/s**<Badge type="warning" text="WIP" />
+### **Upload Cape**
+`POST /api/admin/user/cape/upload`
+
+**Request Headers**:
+- **Authorization**: Bearer `jwt_token
+
+**Request Body form**:
+
+mime type: `image/png`
+```
+cape: file
+name: string
+owners: [ownersid, ownersid]
+```
+
+### **Delete Cape**
+`DELETE /api/admin/user/cape/upload`
+
+**Request Headers**:
+- **Authorization**: Bearer `jwt_token
+
+**Request Body**:
+```json
+{
+    "capeid": "uuid"
+}
+```
+
+### **Get all users skins**
+`GET /api/admin/users/skin/{uuid}`
+
+**Request Headers**:
+- **Authorization**: Bearer `jwt_token
+
+
+
+## **Get skin/s**
 
 ### **GravitLauncher**
 `GET /api/skin/gravitlauncher/:uuid`
@@ -965,4 +1000,19 @@ If the `expired_at` field is not provided, the role update will be permanent for
 }
 ```
 
+#### **Give user permission**
+`POST /api/service/permission`
+
+**Request Headers**:
+- **Authorization
+- **ServiceApiToken**
+
+**Request Body**:
+```json
+{
+    "userid": 0,
+    "permission": 1,
+    "expired_at": 1731798166   // (if not provided, role will be permanent)
+}
+```
 
