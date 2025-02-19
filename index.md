@@ -13,6 +13,10 @@ hero:
     - theme: alt
       text: Wiki
       link: /dev
+    - theme: alt
+      text: Buy
+      link: https://discord.gg/Zgq4JuCa8z
+
 
 # features:
 #   - title: Feature A
