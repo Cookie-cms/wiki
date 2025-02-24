@@ -644,8 +644,10 @@ Options can be:
     "url": null,
     "data": [
         {
+            "id": int,
             "username": string,   // Username of the user
-            "uuid": string        // Unique identifier for the user
+            "uuid": string,        // Unique identifier for the user
+            "perm_lvl": int,       // Permission level (1, 2, or 3)
         }
     ]
 }
@@ -889,6 +891,41 @@ owners: [ownersid, ownersid]
 **Request Headers**:
 - **Authorization**: Bearer `jwt_token
 
+### **Audit List** <Badge type="warning" text="WIP" />
+`GET /api/admin/audit`
+
+**Request Headers**:
+- **Authorization**: Bearer `jwt_token`
+
+**Response**:
+
+- **200 OK**:
+```json
+{
+    "error": false,
+    "msg": "Audit fetched successfully",
+    "url": null,
+    "data": [
+        {
+            "id": int,
+            "iss": string,
+            "action": string,
+            "for": int,
+            "time": int
+        }
+    ]
+}
+```
+
+- **403 Forbidden**:
+```json
+{
+    "error": true,
+    "msg": "You do not have permission to view the user list",
+    "url": null,
+    "data": {}
+}
+```
 
 
 ## **Get skin/s**
