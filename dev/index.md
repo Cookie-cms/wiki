@@ -7,7 +7,7 @@ next:
 
 Actual on 03.02.2025
 
-### **Standard Response Format**
+## **Standard Response Format**
 
 All responses from the API will follow the standard format:
 
@@ -20,7 +20,29 @@ All responses from the API will follow the standard format:
 }
 ```
 
----
+<details>
+<summary>Possible error responses</summary>
+
+- **400 Bad Request**: The request was invalid or missing required parameters
+- **401 Unauthorized**: The request requires authentication or the JWT token is invalid
+- **403 Forbidden**: The request is not allowed or the user does not have permission
+- **404 Not Found**: The requested resource was not found
+- **409 Conflict**: The request could not be completed due to a conflict with the current state of the resource
+- **500 Internal Server Error**: An unexpected error occurred on the server
+
+format:
+```json
+{
+    "error": true,
+    "msg": "Error message",
+    "url": null,
+    "data": {}
+}
+```
+
+
+</details>
+
 
 ## **Authentication (Auth)**
 
@@ -49,15 +71,6 @@ All responses from the API will follow the standard format:
 }
 ```
 
-- **401 Unauthorized**:
-```json
-{
-    "error": true,
-    "msg": "Invalid credentials",
-    "url": null,
-    "data": {}
-}
-```
 
 ---
 
@@ -86,26 +99,6 @@ Steps
     "error": false,
     "msg": "Registration successful",
     "url": "string",  // URL for the next step, if applicable
-    "data": {}
-}
-```
-
-- **400 Bad Request**:
-```json
-{
-    "error": true,
-    "msg": "Invalid email or password",
-    "url": null,
-    "data": {}
-}
-```
-
-- **409 Conflict**:
-```json
-{
-    "error": true,
-    "msg": "Email already exists",
-    "url": null,
     "data": {}
 }
 ```
@@ -164,16 +157,6 @@ Steps
 
 - **204 No Content**
 
-- **400 Bad Request**:
-```json
-{
-    "error": true,
-    "msg": "Invalid code",
-    "url": null,
-    "data": {}
-}
-```
-
 
 ### step 3
 `POST /api/auth/forgetpass/update`
@@ -198,15 +181,6 @@ Steps
 }
 ```
 
-- **400 Bad Request**:
-```json
-{
-    "error": true,
-    "msg": "Invalid code",
-    "url": null,
-    "data": {}
-}
-```
 
 
 
@@ -235,15 +209,7 @@ Steps
 }
 ```
 
-- **400 Bad Request**:
-```json
-{
-    "error": true,
-    "msg": "Invalid or expired token",
-    "url": null,
-    "data": {}
-}
-```
+
 
 ---
 
@@ -274,24 +240,6 @@ Password required (min 8 characters)
 }
 ```
 
-- **409 Conflict**:
-```json
-{
-    "error": true,
-    "msg": "Username already taken",
-    "url": null,
-    "data": {}
-}
-```
-- **400 Bad Request**:
-```json
-{
-    "error": true,
-    "msg": "Password require 8 symb",
-    "url": null,
-    "data": {}
-}
-```
 
 ---
 
@@ -307,16 +255,6 @@ Password required (min 8 characters)
 {
     "error": false,
     "msg": "Logged out successfully",
-    "url": null,
-    "data": {}
-}
-```
-
-- **401 Unauthorized**:
-```json
-{
-    "error": true,
-    "msg": "Invalid JWT token",
     "url": null,
     "data": {}
 }
@@ -368,29 +306,6 @@ Password required (min 8 characters)
 }
 ```
 
-- **401 Unauthorized**:
-```json
-{
-    "error": true,
-    "msg": "Invalid JWT token",
-    "url": null,
-    "data": {}
-}
-```
----
-
-- **403 Forbidden**:
-```json
-{
-    "error": true,
-    "msg": "Account is not finished",
-    "url": null,
-    "data": {
-        "password_create": true,
-        "username_create": true
-    }
-}
-```
 
 ### **Edit User Details**
 <!-- `POST /api/home/edit` -->
@@ -500,17 +415,6 @@ Options can be:
 ```
 
 
-- **401 Unauthorized**:
-```json
-{
-    "error": true,
-    "msg": "{ Action error }",
-    "url": null,
-    "data": {}
-}
-```
-
-
 #### **Upload Skins**
 `POST /api/home/edit/upload`
 
@@ -537,98 +441,9 @@ Options can be:
 ```
 
 
-- **400 Bad request**
-```json
-{
-    "error": true,
-    "msg": "{ Action error }",
-    "url": null,
-    "data": {}
-}
-```
+## **Admin Endpoints**
 
-<!-- ---
-
-### **Verify Email**
-`POST /api/auth/verify-email`
-
-**Request Headers**:
-- **Authorization**: Bearer `jwt_token`
-
-**Request Body**:
-```
-{
-    "verify_code": string  // The verification code received in the email
-}
-```
-
-**Response**:
-
-- **200 OK**:
-```
-{
-    "error": false,
-    "msg": "Email verified successfully",
-    "url": null,
-    "data": {}
-}
-```
-
-- **401 Unauthorized**:
-```
-{
-    "error": true, 
-    "msg": "Invalid or expired verification code",
-    "url": null,
-    "data": {}
-}
-```
-
---- -->
-
-
-
-
-
-
-<!-- ### **Discord Integration Settings**
-`POST /home/discord`
-
-**Request Body**:
-```
-{
-    "discord_integration": true | null,  // Enable or disable Discord integration
-    "password": "string | null"          // Current password (only required if updating integration settings)
-}
-```
-
-**Response**:
-
-- **200 OK**:
-```
-{
-    "error": false,
-    "msg": "Discord integration settings updated",
-    "url": string,  // Discord integration URL to complete the setup
-    "data": {}
-}
-```
-
-- **400 Bad Request**:
-```
-{
-    "error": true,  // error indicating an error
-    "msg": "Invalid request or missing password",
-    "url": null,
-    "data": {}
-}
-```
-
---- -->
-
-## **Admin Endpoints** <Badge type="warning" text="WIP" />
-
-### **Users List** <Badge type="warning" text="WIP" />
+### **Users List**
 `GET /api/admin/users`
 
 **Request Headers**:
@@ -645,27 +460,22 @@ Options can be:
     "data": [
         {
             "id": int,
-            "username": string,   // Username of the user
-            "uuid": string,        // Unique identifier for the user
-            "perm_lvl": int,       // Permission level (1, 2, or 3)
+            "username": string,
+            "dsid": string,
+            "mail": string,
+            "mail_verify": int,
+            "uuid": string,
+            "password": string,
+            "perms": int,
+            "accessToken": null,
+            "serverID": null,
+            "hwidId": null
         }
     ]
 }
 ```
 
-- **403 Forbidden**:
-```json
-{
-    "error": true,
-    "msg": "You do not have permission to view the user list",
-    "url": null,
-    "data": {}
-}
-```
-
----
-
-### **Get Specific User** <Badge type="warning" text="WIP" />
+### **Get Specific User**
 `GET /api/admin/user/{identifier}`
 
 **Request Headers**:
@@ -677,33 +487,80 @@ Options can be:
 ```json
 {
     "error": false,
-    "msg": "User details fetched successfully",
+    "msg": "User data fetched successfully",
     "url": null,
     "data": {
-        "username": "string",                // Username of the user
-        "uuid": "string",                    // Unique identifier for the user
-        "selected_cape": 0,                // ID of the currently selected cape
-        "capes": [
+        "Username": string,
+        "Uuid": string,
+        "Mail": string,
+        "Mail_verify": bool(int),
+        "Selected_Cape": int,
+        "Selected_Skin": string,
+        "PermLvl": int,
+        "Capes": [
             {
-                "id": 0                      // Cape ID
+                "Id": string,
+                "Name": string
             }
-        ],                                   // List of capes associated with the user
-        "discord": {
-            "discord_id": "int"              // Discord ID of the user
+        ],
+        "Skins": [
+            {
+                "uuid": string,
+                "name": string,
+                "cloak_id": string
+            }
+        ],
+        "Discord_integration": bool(true/false),
+        "Discord": {
+            "userid": string,
+            "username": string,
+            "avatar": string
         },
-        "mail_verification": true,           // Email verification status
-        "mail": "string"                     // User's email address
+        "Mail_verification": bool(0/1)
     }
 }
 ```
 
-- **403 Forbidden**:
+---
+
+### **Patch Specific User**
+`PATCH /api/admin/user/{identifier}`
+
+**Request Headers**:
+- **Authorization**: Bearer `jwt_token`
+
+**Request Body**:
 ```json
 {
-    "error": true,
-    "msg": "You do not have permission to access this user's details",
-    "url": null,
-    "data": {}
+    "username": string,   // The username of the user
+    "mail": string,       // The email address of the user
+    "mail_verify": bool,  // Whether the email is verified
+    "selected_skin": string, // ID of the selected skin
+    "password": string,   // The password of the user
+    "perms": int,         // The permission level of the user
+    "dsid": bool, // Whether Discord integration is enabled
+    "mail_verification": bool // Whether the email is verified
+}
+```
+
+if you want give temporary role use [Update User Role](#update-user-role)
+
+
+---
+
+### **Patch Skin User**
+`PATCH /api/admin/skin/:uuid`
+
+**Request Headers**:
+- **Authorization**: Bearer `jwt_token`
+
+**Request Body**:
+```json
+{
+    "name": string,
+    "slim": bool,
+    "hd": bool,
+    "cloakid": string,
 }
 ```
 
@@ -730,14 +587,6 @@ Options can be:
 ```json
 {
     "msg": "Email sent successfully to all users"
-}
-```
-
-- **403 Forbidden**:
-```json
-{
-    "error": true,
-    "msg": "You do not have permission to send emails to all users"
 }
 ```
 
@@ -776,26 +625,6 @@ This endpoint allows an admin to update the role level (`role_level`) of a user 
 }
 ```
 
-- **400 Bad Request**:
-```json
-{
-    "error": true,
-    "msg": "Invalid role level or expired_at must be a valid future date",
-    "url": null,
-    "data": {}
-}
-```
-
-- **403 Forbidden**:
-```json
-{
-    "error": true,
-    "msg": "You do not have permission to update this user's role",
-    "url": null,
-    "data": {}
-}
-```
-
 ---
 
 ### **Optional Expiry Field**:
@@ -804,7 +633,7 @@ If the `expired_at` field is not provided, the role update will be permanent for
 
 ---
 
-### **Update User Role** <Badge type="warning" text="WIP" />
+### **Add user cape** <Badge type="warning" text="WIP" />
 
 `POST /api/admin/user/cape/{identifier}`
 
@@ -833,26 +662,6 @@ If the `expired_at` field is not provided, the role update will be permanent for
         "new_role_level": 3,            // The updated role level
         "expired_at": 1731798166  // Expiry date if provided
     }
-}
-```
-
-- **400 Bad Request**:
-```json
-{
-    "error": true,
-    "msg": "Invalid role level or expired_at must be a valid future date",
-    "url": null,
-    "data": {}
-}
-```
-
-- **403 Forbidden**:
-```json
-{
-    "error": true,
-    "msg": "You do not have permission to update this user's role",
-    "url": null,
-    "data": {}
 }
 ```
 
@@ -891,7 +700,7 @@ owners: [ownersid, ownersid]
 **Request Headers**:
 - **Authorization**: Bearer `jwt_token
 
-### **Audit List** <Badge type="warning" text="WIP" />
+### **Audit List**
 `GET /api/admin/audit`
 
 **Request Headers**:
@@ -917,15 +726,59 @@ owners: [ownersid, ownersid]
 }
 ```
 
-- **403 Forbidden**:
+
+### **Skins List**
+`GET /api/admin/skins`
+
+**Request Headers**:
+- **Authorization**: Bearer `jwt_token`
+
+**Response**:
+
+- **200 OK**:
 ```json
 {
-    "error": true,
-    "msg": "You do not have permission to view the user list",
+    "error": false,
+    "msg": "Audit fetched successfully",
     "url": null,
-    "data": {}
+    "data": [
+        {
+            "id": int,
+            "iss": string,
+            "action": string,
+            "for": int,
+            "time": int
+        }
+    ]
 }
 ```
+
+### **Capes List**
+`GET /api/admin/allcapes`
+
+**Request Headers**:
+- **Authorization**: Bearer `jwt_token`
+
+**Response**:
+
+- **200 OK**:
+```json
+{
+    "error": false,
+    "msg": "Audit fetched successfully",
+    "url": null,
+    "data": [
+        {
+            "id": int,
+            "iss": string,
+            "action": string,
+            "for": int,
+            "time": int
+        }
+    ]
+}
+```
+
 
 
 ## **Get skin/s**
@@ -1026,14 +879,6 @@ owners: [ownersid, ownersid]
         "username": ""
         "uuid": ""
     }
-}
-```
-
-- **403 Forbidden**:
-```json
-{
-    "error": true,
-    "msg": "You do not have permission to do this."
 }
 ```
 
