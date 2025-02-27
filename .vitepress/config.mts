@@ -14,16 +14,16 @@ export default withMermaid({
     },
     sidebar: [
       {
-        text: 'Old',
+        text: 'Old (Deprecated)',
         collapsed: true,
         items: [
-          { text: 'SimpleCabinet (Deprecated)', link: 'https://github.com/Cookie-cms/simplecabinet' },
+          { text: 'SimpleCabinet', link: 'https://github.com/Cookie-cms/simplecabinet' },
           { text: '1-beta', link: '/1-beta' },
           { text: '2-beta', link: '/2-beta' }
         ]
       },
       {
-        text: 'Things',
+        text: 'Things (Deprecated)',
         collapsed: true,
         items: [
           { text: 'Template engine', link: '/things/templateengine' },
@@ -33,11 +33,22 @@ export default withMermaid({
         ]
       },
       {
-        text: 'Development',
+        text: 'CookieCms',
         collapsed: false,
         items: [
           { text: 'Installation', link: '/dev/installation' },
-          { text: 'Api', link: '/dev' },
+          {
+            text: 'Api documentation',
+            items: [
+              { text: 'Information', link: '/dev/api/' },
+              { text: 'Auth', link: '/dev/api/auth' },
+              { text: 'Home', link: '/dev/api/home' },
+              { text: 'Admin', link: '/dev/api/admin' },
+              { text: 'Get skins', link: '/dev/api/getskins' },
+              { text: 'Service', link: '/dev/api/service' },
+
+            ]
+          },
           { text: 'Version rules', link: '/dev/verule' },
           { text: 'Changes', link: 'dev/changelog.md' },
           { text: 'Configuration', link: '/dev/configuration' },

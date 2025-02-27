@@ -3,17 +3,16 @@
 ```yml
 NameSite: cookiecms
 securecode: "generated string for 64symbols"
-ServiceApiToken: "generated string for 64symbols"
+ServiceApiToken: generated string for 64symbols
 MaxSavedSkins: 1
-debugToken: 64c82dcb-c29d-4ff8-b6e6-b796a2672a1 # removed in new version
+domain: "http://localhost:3000"
+demo: false
+logLevel: ["info","warn","error"]
 
-# testing
+# Duplicating audit from site to discord 
 AuditSecret: 
-  enabled: false
+  enabled: true
   url: ""
-  spamming: "thread_id"
-  audit: "thread_id" # main information change password change mail etc
-
 
 database:
   host: "localhost"
@@ -22,19 +21,18 @@ database:
   db: "cookiecms"
   port: 34002
 
-# not implemented
 smtp:
-  host: "mail_host"
-  SMTPAuth: true
-  Username: "mail"
-  Password: "pass"
-  SMTPSecure: ""
-  Port: 587
+  Host: ""
+  Username: ""
+  Password: ""
+  SMTPSecure: true
+  Port: 465
+
 
 discord:
   enabled: true
-  client_id: "client_id"
-  secret_id: "secret_id"
+  client_id: ""
+  secret_id: ""
   scopes:
     - identify
     - email
@@ -43,7 +41,12 @@ discord:
   guild_id: 0
   role: 0
 
-# not implemented
+
+features:
+  blogs: true
+  theards: true
+  shop: true
+
 permissions:
   0:
     - page.userlist
@@ -56,16 +59,20 @@ permissions:
   2:
     - profile.changeskinHD
   3:
-    - admin.userslist
+    - admin.users
+    - admin.userskins
     - admin.useredit
+    - admin.user
     - admin.mailsend
+    - admin.capes
+    - admin.audit
+  4:
+    - admin.settings
 
 
-# not implemented
 servers:
   name:
     name:
     ip:
     port:
-
 ```

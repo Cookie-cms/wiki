@@ -107,55 +107,7 @@ Z увеличиваем при исправлении багов, улучше�
 Обязательно документируйте все изменения, которые могут повлиять на совместимость версий или которые требуют увеличения мажорной версии.
 
 
-## setup standard-version 
-``.versionrc.json``
-```json
-{
-  "bumpFiles": [
-    {
-      "filename": "package.json",
-      "type": "json"
-    },
-    {
-      "filename": "package-lock.json",
-      "type": "json"
-    }
-  ],
-  "types": [
-    { "type": "feat", "section": "Features", "increment": "minor" },
-    { "type": "fix", "section": "Bug Fixes", "increment": "patch" },
-    { "type": "release", "section": "Releases", "increment": "major" }
-  ]
-}
-```
 
-Тебе нужно настроить `standard-version` или `semantic-release` так, чтобы при коммите с `release` обновлялся `X` (релизная версия).  
-
----
-
-### **Настройка для `standard-version`**
-По умолчанию `standard-version` обновляет версию по правилам **SemVer** (major.minor.patch), но ты хочешь, чтобы **`X` увеличивался при коммите с `release`**.  
-
-1. **Создай файл `.versionrc.json`** в корне проекта:  
-```json
-{
-  "bumpFiles": [
-    {
-      "filename": "package.json",
-      "type": "json"
-    },
-    {
-      "filename": "package-lock.json",
-      "type": "json"
-    }
-  ],
-  "types": [
-    { "type": "feat", "section": "Features", "increment": "minor" },
-    { "type": "fix", "section": "Bug Fixes", "increment": "patch" },
-    { "type": "release", "section": "Releases", "increment": "major" }
-  ]
-}
-```
 
 2. **Пример коммитов:**  
 ```sh

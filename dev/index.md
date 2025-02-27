@@ -5,8 +5,6 @@ next:
 ---
 # **API Documentation**
 
-Actual on 03.02.2025
-
 ## **Standard Response Format**
 
 All responses from the API will follow the standard format:
