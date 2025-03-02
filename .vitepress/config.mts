@@ -1,7 +1,7 @@
 // filepath: /home/misha/code/cookiecms/wiki2/.vitepress/config.mts
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid";
-import myVitePressPlugin from '../plugins/vitepress-plugin';
+// import myVitePressPlugin from '../plugins/vitepress-plugin';
 
 export default withMermaid({
   title: "CookieCMS Wiki",
@@ -49,6 +49,7 @@ export default withMermaid({
 
             ]
           },
+          // { text: 'Theards', link: '/dev/api/theards' },
           { text: 'Version rules', link: '/dev/verule' },
           { text: 'Changes', link: 'dev/changelog.md' },
           { text: 'Configuration', link: '/dev/configuration' },
@@ -65,5 +66,6 @@ export default withMermaid({
       { icon: 'discord', link: 'https://discord.gg/4YQ3hNVm8P' }
     ]
   },
+  
   
 })

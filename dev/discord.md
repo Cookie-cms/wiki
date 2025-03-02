@@ -142,4 +142,8 @@ flowchart TD
     E -->|Register New| G[Create Account]
     F --> D
     G --> D
+    B --> X{Has jwt token?}
+    X --> AA{Is connected?}
+    AA --> |Yes| P[return error]
+    AA --> |No| S[Link account & redirect]
 ```

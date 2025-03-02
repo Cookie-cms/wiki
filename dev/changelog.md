@@ -1,12 +1,33 @@
 ---
 next:
-  text: 'Change log frontend'
-  link: '/dev/changelog-frontend'
+  text: 'Change log'
+  link: '/dev/changelog'
 ---
 
 
-# Change log backend
+# Change log
 
+## Changelog - v2.0.0
+
+### Admin panel
+  - User management
+  - Audit
+  - Skin manager
+  - Update user
+  - Update cape
+
+### Mini forum
+  - Create post
+  - Update post
+  - Delete post
+  - Comment on post
+  - Update comment
+  - Delete comment
+  - Like post
+  - Like comment
+  - Report post
+  - Report comment
+  - Ban user
 
 ## Changelog - v1.0.0
 

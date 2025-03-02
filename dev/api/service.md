@@ -1,5 +1,8 @@
 # **Service Endpoints**<Badge type="warning" text="WIP" />
 
+**Request Headers**:
+- **ServiceApiToken**
+
 ## **Find user account** <Badge type="warning" text="WIP" />
 `POST /api/service/user`
 
@@ -30,12 +33,10 @@
 }
 ```
 
-## **Give user permission**
+## **Give user permission** <Badge type="warning" text="WIP" />
 `POST /api/service/permission`
 
-**Request Headers**:
-- **Authorization
-- **ServiceApiToken**
+
 
 **Request Body**:
 ```json
