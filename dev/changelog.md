@@ -16,7 +16,7 @@ next:
   - Update user
   - Update cape
 
-### Mini forum
+<!-- ### Mini forum
   - Create post
   - Update post
   - Delete post
@@ -27,7 +27,7 @@ next:
   - Like comment
   - Report post
   - Report comment
-  - Ban user
+  - Ban user -->
 
 ## Changelog - v1.0.0
 
