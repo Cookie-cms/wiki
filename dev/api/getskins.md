@@ -25,44 +25,78 @@
 - use standard response
 
 ## **Head**
-`GET /api/skin/head/:uuid?size=100`
+
+**Request:**
+```http
+GET /api/skin/head/:uuid?size=100&type=skin
+```
+
+**Query Parameters:**
+- `size` (optional, default: `100`) - Image size in pixels.
+- `type` (optional, default: `skin`) - Available values:
+  - `skin`: Returns the skin texture file.
+  - `player`: Returns the actual player model with the skin applied.
+
+**Response:**
+- PNG file of the requested head texture.
 
 ## **Body**
-`GET /api/skin/body/:uuid?size=100`
+**Request:**
+```http
+GET /api/skin/body/:uuid?size=100&type=skin
+```
+
+**Query Parameters:**
+- `size` (optional, default: `100`) - Image size in pixels.
+- `type` (optional, default: `skin`) - Available values:
+  - `skin`: Returns the skin texture file.
+  - `player`: Returns the actual player model with the skin applied.
+
+**Response:**
+- PNG file of the requested body texture.
 
 ## **Cloak**
-`GET /api/skin/cloak/:idcloak?size=100`
 
-**Response**:
-- it will cloak file png
+```http
+GET /api/skin/cloak/:idcloak?size=100&type=skin
+```
 
-## **Standart request skins**
+**Query Parameters:**
+- `size` (optional, default: `100`) - Image size in pixels.
+- `type` (optional, default: `skin`) - Available values:
+  - `skin`: Returns the cloak texture file.
+  - `player`: Returns the actual player model with the cloak applied.
 
-## Actual skin
-**HERE UUID OF USER**
-`GET /api/skin/standart/:uuid`
-
-**Response**:
-- it will return file png
-
-## Actual cape
-
-**HERE UUID OF USER**
-
-`GET /api/skin/standart/cape/:uuid`
-
-**Response**:
-- it will return file png
+**Response:**
+- PNG file of the requested cloak texture.
 
 
-## Skin by name
+## skin file
+```http
+GET /api/skin/cloak/:uuid?type=skin
+```
 
-**HERE UUID OF FILE**
+**Query Parameters:**
+- `type` (optional, default: `skin`) - Available values:
+  - `skin`: Returns the cloak texture file.
+  - `player`: Returns the actual player model with the cloak applied.
 
-`GET /api/skin/public/:uuid`
 
-## Cape by name
+**Response:**
+- PNG file of the requested skin texture.
 
-**HERE UUID OF FILE**
+## cape file
 
-`GET /api/skin/public/cape/:uuid`
+```http
+GET /api/skin/standart/cape/:uuid?type=skin
+```
+
+**Query Parameters:**
+- `type` (optional, default: `skin`) - Available values:
+  - `skin`: Returns the cloak texture file.
+  - `player`: Returns the actual player model with the cloak applied.
+
+
+**Response:**
+- PNG file of the requested skin texture.
+
