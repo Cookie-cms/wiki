@@ -1,3 +1,4 @@
+## deprecated its not need to use this anymore
 ## Linux/macOS
 
 ### 1. **Получение Personal Access Token (PAT)**
