@@ -14,6 +14,34 @@ export default withMermaid({
     },
     sidebar: [
       {
+        text: 'CookieCms',
+        collapsed: false,
+        items: [
+          { text: 'Installation', link: '/v1/installation' },
+          {
+            text: 'Api documentation',
+            items: [
+              { text: 'Information', link: '/v1/api/' },
+              { text: 'Auth', link: '/v1/api/auth' },
+              { text: 'Home', link: '/v1/api/home' },
+              { text: 'Admin', link: '/v1/api/admin' },
+              { text: 'Get skins', link: '/v1/api/getskins' },
+              { text: 'Service', link: '/v1/api/service' },
+
+            ]
+          },
+          // { text: 'Theards', link: '/v1/api/theards' },
+          { text: 'Version rules', link: '/v1/verule' },
+          { text: 'Changes', link: 'v1/changelog.md' },
+          { text: 'Configuration', link: '/v1/configuration' },
+          { text: 'User permissions lvl', link: '/v1/usrpermlvl', },
+          { text: 'Skin logic', link: '/v1/skinlogic', },
+          { text: 'Discord auth', link: '/v1/discord', },
+          { text: 'Verify codes', link: '/v1/verifycodes', },
+          // { text: 'How install private pkg?', link: '/v1/package', },
+        ]
+      },
+      {
         text: 'Old (Deprecated)',
         collapsed: true,
         items: [
@@ -30,34 +58,6 @@ export default withMermaid({
           { text: 'Fixed 2d skin', link: '/things/2dskin' },
           { text: 'Simple-code', link: '/things/simplecode' },
           { text: 'Admin-access', link: '/things/adminaccess' }
-        ]
-      },
-      {
-        text: 'CookieCms',
-        collapsed: false,
-        items: [
-          { text: 'Installation', link: '/dev/installation' },
-          {
-            text: 'Api documentation',
-            items: [
-              { text: 'Information', link: '/dev/api/' },
-              { text: 'Auth', link: '/dev/api/auth' },
-              { text: 'Home', link: '/dev/api/home' },
-              { text: 'Admin', link: '/dev/api/admin' },
-              { text: 'Get skins', link: '/dev/api/getskins' },
-              { text: 'Service', link: '/dev/api/service' },
-
-            ]
-          },
-          // { text: 'Theards', link: '/dev/api/theards' },
-          { text: 'Version rules', link: '/dev/verule' },
-          { text: 'Changes', link: 'dev/changelog.md' },
-          { text: 'Configuration', link: '/dev/configuration' },
-          { text: 'User permissions lvl', link: '/dev/usrpermlvl', },
-          { text: 'Skin logic', link: '/dev/skinlogic', },
-          { text: 'Discord auth', link: '/dev/discord', },
-          { text: 'Verify codes', link: '/dev/verifycodes', },
-          { text: 'How install private pkg?', link: '/dev/package', },
         ]
       },
     ],

@@ -12,10 +12,7 @@ hero:
       link: https://cookiecms.coffeedev.dev/
     - theme: alt
       text: Wiki
-      link: /dev
-    - theme: alt
-      text: Buy
-      link: https://discord.gg/Zgq4JuCa8z
+      link: /v1/api/
 
 
 # features:
