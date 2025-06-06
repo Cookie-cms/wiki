@@ -7,6 +7,9 @@ export default withMermaid({
   title: "CookieCMS Wiki",
   description: "Wiki",
   lastUpdated: true,
+  ignoreDeadLinks: [
+    /^https?:\/\/localhost/,
+  ],
 
   themeConfig: {
     search: {
