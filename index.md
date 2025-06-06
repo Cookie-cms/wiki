@@ -7,21 +7,23 @@ hero:
   text: "Wiki"
   # tagline: My great project tagline
   actions:
+    # - theme: brand
+    #   text: Demo
+    #   link: https://cookiecms.coffeedev.dev/
     - theme: brand
-      text: Demo
-      link: https://cookiecms.coffeedev.dev/
-    - theme: alt
       text: Wiki
       link: /v1/api/
 
 
-# features:
-#   - title: Feature A
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature B
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature C
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+features:
+  - title: Gravit launcher auth integration
+    details: Fully implemented authentication with HWID support
+  - title: PostgreSQL database
+    details: Uses PostgreSQL for data storage, ensuring reliability and scalability
+  - title: Password hashing
+    details: Implements secure password hashing argon2 or bcrypt both supported for user authentication
+  - title: Administration panel
+    details: Provides a user-friendly interface for managing the system
 ---
 
 <script setup>

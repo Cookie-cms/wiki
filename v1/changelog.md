@@ -9,12 +9,13 @@ next:
 
 ## Changelog - v2.0.0
 
-### Admin panel
+Work in progress, stay tuned!
+<!-- ### Admin panel
   - User management
   - Audit
   - Skin manager
   - Update user
-  - Update cape
+  - Update cape -->
 
 <!-- ### Mini forum
   - Create post

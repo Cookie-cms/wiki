@@ -6,9 +6,8 @@ All responses from the API will follow the standard format:
 
 ```json
 {
-    "error": bool,    // Indicates if there was an error (default is false)
-    "msg": string,    // A message to describe the result or error
-    "url": string,    // A URL for redirection, default is null
+    "msg": string,    // A message to describe the result or error (can be empty)
+    "url": string,    // A URL for redirection, default is null (can be empty)
     "data": {}        // Data object containing the response data (can be empty)
 }
 ```

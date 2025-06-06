@@ -38,7 +38,8 @@ export default withMermaid({
           { text: 'Skin logic', link: '/v1/skinlogic', },
           { text: 'Discord auth', link: '/v1/discord', },
           { text: 'Verify codes', link: '/v1/verifycodes', },
-          // { text: 'How install private pkg?', link: '/v1/package', },
+          { text: 'How install private pkg?', link: '/v1/package', },
+          { text: 'Cookie Bot', link: '#', },
         ]
       },
       {
