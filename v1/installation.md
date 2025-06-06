@@ -1,6 +1,6 @@
 > [!NOTE]  
 > Work in progress
-
+<!-- 
 # Installation Guide
 
 ## Docker Installation
@@ -107,4 +107,4 @@ To enable HTTPS, uncomment the SSL sections and use Certbot to obtain certificat
 sudo apt install certbot python3-certbot-nginx
 sudo certbot
 ```
-:::
+::: -->
