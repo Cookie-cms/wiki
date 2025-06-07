@@ -7,28 +7,22 @@ next:
 
 # Change log
 
-## Changelog - v2.0.0
+## Changelog - v2.0.0 (upcoming)
 
-Work in progress, stay tuned!
-<!-- ### Admin panel
+### Major Changes
+  - added support for postgreSQL database
+  - added support for argon2 password hashing
+  - added full implementation of GravitLauncher authentication
+  - Remade the entire home page
+  - Settings page was removed, all settings were moved to the user profile
+  ...
+### Admin panel
   - User management
   - Audit
   - Skin manager
   - Update user
-  - Update cape -->
+  - Update cape 
 
-<!-- ### Mini forum
-  - Create post
-  - Update post
-  - Delete post
-  - Comment on post
-  - Update comment
-  - Delete comment
-  - Like post
-  - Like comment
-  - Report post
-  - Report comment
-  - Ban user -->
 
 ## Changelog - v1.0.0
 

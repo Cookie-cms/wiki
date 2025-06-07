@@ -1,12 +1,12 @@
 > [!NOTE]  
 > Work in progress
-<!-- # CookieBot
+# CookieBot
 
 CookieBot — это Discord-бот на Python для CookieCMS. Он позволяет:
 
 - Искать Discord пользователя по нику из игры и наоборот.
 - Для админов: повышать или понижать ранг пользователя.
-
+<!-- 
 ## Установка
 
 1. Установите Python 3.10+  

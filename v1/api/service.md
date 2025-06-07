@@ -12,7 +12,7 @@
 **Request Body**:
 ```json
 {
-    "Discord_id": 0,       // Subject of the email
+    "DiscordId": "0",
     "Playername": "string"        // The body content of the email
 }
 ```
@@ -41,7 +41,7 @@
 **Request Body**:
 ```json
 {
-    "userid": 0,
+    "userid": "0",
     "permission": 1,
     "expired_at": 1731798166   // (if not provided, role will be permanent)
 }

@@ -21,9 +21,6 @@
 }
 ```
 
-## **Gml**
-- use standard response
-
 ## **Head**
 
 **Request:**

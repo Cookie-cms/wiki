@@ -34,15 +34,16 @@ export default withMermaid({
             ]
           },
           // { text: 'Theards', link: '/v1/api/theards' },
-          { text: 'Version rules', link: '/v1/verule' },
-          { text: 'Changes', link: 'v1/changelog.md' },
+          { text: 'Version rules', link: '/verule' },
+          { text: 'Changes', link: '/changelog' },
           { text: 'Configuration', link: '/v1/configuration' },
           { text: 'User permissions lvl', link: '/v1/usrpermlvl', },
           { text: 'Skin logic', link: '/v1/skinlogic', },
           { text: 'Discord auth', link: '/v1/discord', },
           { text: 'Verify codes', link: '/v1/verifycodes', },
-          { text: 'How install private pkg?', link: '/v1/package', },
-          { text: 'Cookie Bot', link: '#', },
+          { text: 'How install private pkg?', link: '/package', },
+          { text: 'Cookie Bot', link: '/cookiebot', },
+          { text: 'How create page?', link: '/createpage' },
         ]
       },
       {
