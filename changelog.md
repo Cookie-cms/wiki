@@ -7,7 +7,7 @@ next:
 
 # Change log
 
-## Changelog - v2.0.0 (upcoming)
+## Changelog - v2.0.0 
 
 ### Major Changes
   - added support for postgreSQL database
