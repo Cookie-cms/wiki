@@ -1,9 +1,9 @@
-# **Service Endpoints**<Badge type="warning" text="WIP" />
+# **Service Endpoints**
 
 **Request Headers**:
 - **ServiceApiToken**
 
-## **Find user account** <Badge type="warning" text="WIP" />
+## **Find user account**
 `POST /api/service/user`
 
 **Request Headers**:
@@ -13,7 +13,7 @@
 ```json
 {
     "DiscordId": "0",
-    "Playername": "string"        // The body content of the email
+    "Playername": "string"
 }
 ```
 
@@ -27,7 +27,7 @@
         "id": ""
     },
     "account": {
-        "username": ""
+        "username": "",
         "uuid": ""
     }
 }

@@ -20,6 +20,7 @@ export default withMermaid({
         text: 'CookieCms',
         collapsed: false,
         items: [
+          { text: 'About', link: '/About' },
           { text: 'Installation', link: '/v1/installation' },
           {
             text: 'Api documentation',

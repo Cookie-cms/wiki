@@ -1,110 +1,91 @@
-> [!NOTE]  
-> Work in progress
-<!-- 
-# Installation Guide
+```markdown
+# Manual Installation Guide
 
-## Docker Installation
+## 1. Prerequisites
 
-<details>
-<summary>Install Docker on Ubuntu</summary>
+Make sure you have the following installed on your system:
+- **Node.js** (v20 or higher)
+- **npm** (v6 or higher)
 
-::: tip
+## 2. Clone the Repository
+
+Open your terminal and run:
+
 ```bash
-sudo apt update -y && \
-sudo apt install -y apt-transport-https ca-certificates curl software-properties-common && \
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && \
-sudo apt update -y && \
-sudo apt install -y docker-ce
-```
-:::
-
-</details>
-
-## Application Setup
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-repo/your-project.git
-cd your-project
+mkdir /opt/cookiecms && cd /opt/cookiecms
+git clone https://github.com/Cookie-cms/cookiecms-js.git
+git clone https://github.com/Cookie-cms/frontend.git
 ```
 
-### 2. Start the Application
+This will clone the project into a folder named `your-project`.
+
+[setup .npmrc file here instructions](/package)
+
 ```bash
-docker-compose up -d
+
+## 3. Install Dependencies
+
+Navigate to the project directory and install the required npm packages:
+
+```bash
+cd cookiecms-js
+npm install
+```
+```bash
+cd frontend
+npm install
 ```
 
-::: warning
-Make sure ports 3001 and 8000 are available on your system.
-:::
+## 4. Initialize the Application
 
+Run the initialization script which sets up the environment and prepares the project:
 
-## Manual Installation
-
-If you prefer not to use Docker, follow these steps:
-
-### 1. Prerequisites
-- Node.js (v20 or higher)
-- npm (v6 or higher)
-
-### 2. Install and Run
 ```bash
-cd cookiecms && \
-npm install && \
-npm run init && \
+cp .env.example .env
+nano .env
+```
+or use your preferred text editor to modify the `.env` file with your configuration settings.
+
+## 5. Start the backend
+
+Launch the application by running:
+
+```bash
 npm run start
 ```
 
-::: info
-The application will be available at http://localhost:3001 and the API at http://localhost:8000
-:::
-
-
-## Reverse Proxy Setup
-
-### Configure Nginx as a reverse proxy
-
-Create a new Nginx config file:
+## 6. Start the frontend
+Navigate to the frontend directory and start the frontend application:
 
 ```bash
-sudo nano /etc/nginx/sites-available/your-project
+cd frontend
+nano .env
 ```
-
-Add the following configuration:
-
-```nginx
-server {
-    listen 80;
-    server_name domain.com;
-
-    location / {
-        proxy_pass http://127.0.0.1:3001;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    }
-
-    location /api {
-        proxy_pass http://127.0.0.1:8000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    }
-}
-```
-
-Enable the site and restart Nginx:
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/your-project /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo systemctl restart nginx
+NEXT_PUBLIC_API_URL=
+NEXT_PUBLIC_PRODUCTION=PROD # PROD, DEMO
+NEXT_PUBLIC_ADMIN_LEVEL=3
+NEXT_PUBLIC_API_KEY=
 ```
 
-::: tip
-To enable HTTPS, uncomment the SSL sections and use Certbot to obtain certificates:
+Then run
 ```bash
-sudo apt install certbot python3-certbot-nginx
-sudo certbot
+npm run build
+npm run start
 ```
-::: -->
+---
+
+## Additional Tips
+
+- **Environment Variables:**  
+  Ensure you have created and configured your `.env` file based on the `.env.example` provided in the repository for proper application settings.
+
+- **Reverse Proxy (Optional):**  
+  If you need to expose your application to the internet with a domain name, consider setting up Nginx as a reverse proxy. You can use the provided Nginx configuration snippet in the repository as a reference.
+
+- **SSL/HTTPS:**  
+  For a secure connection, install Certbot and follow the instructions to obtain and install SSL certificates.
+
+That's it! Your manual installation of CookieCMS is now complete.
+```

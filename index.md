@@ -12,7 +12,7 @@ hero:
     #   link: https://cookiecms.coffeedev.dev/
     - theme: brand
       text: Wiki
-      link: /v1/api/
+      link: /about
 
 
 features:
@@ -25,7 +25,7 @@ features:
   - title: Administration panel
     details: Provides a user-friendly interface for managing the system
 ---
-
+<!--
 <script setup>
   import {
     VPTeamPage,

@@ -15,7 +15,10 @@ next:
   - added full implementation of GravitLauncher authentication
   - Remade the entire home page
   - Settings page was removed, all settings were moved to the user profile
-  ...
+  - removed config.yml, now all settings are in .env
+  - permission system was completely rewritten
+  - find user account endpoint was added 
+  
 ### Admin panel
   - User management
   - Audit

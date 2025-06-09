@@ -1,7 +1,7 @@
 
 # **Get skin/s**
 
-## **GravitLauncher**
+## **GravitLauncher** (Better use full authentication service)
 `GET /api/skin/gravitlauncher/:uuid`
 
 **Response**:

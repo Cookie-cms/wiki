@@ -1,5 +1,16 @@
 # **Authentication (Auth)**
 
+
+## JWT Token
+```json
+{
+  "sub": 1,
+  "iat": 1749478437,
+  "exp": 1749482037,
+  "sId": 1,
+}
+```
+
 ## **Login**
 `POST /api/auth/login`
 
