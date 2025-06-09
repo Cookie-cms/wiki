@@ -37,7 +37,7 @@ export default withMermaid({
           // { text: 'Theards', link: '/v1/api/theards' },
           { text: 'Version rules', link: '/verule' },
           { text: 'Changes', link: '/changelog' },
-          { text: 'Configuration', link: '/v1/configuration' },
+          { text: 'Configuration', link: '/v2/configuration' },
           { text: 'User permissions lvl', link: '/v1/usrpermlvl', },
           { text: 'Skin logic', link: '/v1/skinlogic', },
           { text: 'Discord auth', link: '/v1/discord', },
