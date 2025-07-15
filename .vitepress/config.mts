@@ -16,7 +16,7 @@ export default withMermaid({
       provider: 'local'
     },
     sidebar: [
-          { text: 'About', link: '/About' },
+          { text: 'About', link: '/about' },
           { text: 'Installation', link: '/v1/installation' },
           {
             text: 'Api documentation',
