@@ -7,6 +7,15 @@ next:
 
 # Change log
 
+## Changelog - v2.1.0 (upcoming)
+
+  - Default password hashing algorithm is now argon2
+  - Remade admin panel
+  - Created session management system
+  - reconstracted the entire Permission system
+  - refactored the entire codebase
+  - added support refresh tokens
+
 ## Changelog - v2.0.0 
 
 ### Major Changes
@@ -24,7 +33,10 @@ next:
   - Audit
   - Skin manager
   - Update user
-  - Update cape 
+  - Update cape
+
+### Problems
+  - Mysql support was died
 
 
 ## Changelog - v1.0.0

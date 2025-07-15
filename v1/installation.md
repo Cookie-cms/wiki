@@ -1,4 +1,8 @@
-```markdown
+
+
+
+
+
 # Manual Installation Guide
 
 ## 1. Prerequisites
@@ -21,7 +25,6 @@ This will clone the project into a folder named `your-project`.
 
 [setup .npmrc file here instructions](/package)
 
-```bash
 
 ## 3. Install Dependencies
 
@@ -88,4 +91,3 @@ npm run start
   For a secure connection, install Certbot and follow the instructions to obtain and install SSL certificates.
 
 That's it! Your manual installation of CookieCMS is now complete.
-```

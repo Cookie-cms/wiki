@@ -16,10 +16,6 @@ export default withMermaid({
       provider: 'local'
     },
     sidebar: [
-      {
-        text: 'CookieCms',
-        collapsed: false,
-        items: [
           { text: 'About', link: '/About' },
           { text: 'Installation', link: '/v1/installation' },
           {
@@ -42,30 +38,17 @@ export default withMermaid({
           { text: 'Skin logic', link: '/v1/skinlogic', },
           { text: 'Discord auth', link: '/v1/discord', },
           { text: 'Verify codes', link: '/v1/verifycodes', },
-          { text: 'How install private pkg?', link: '/package', },
           { text: 'Cookie Bot', link: '/cookiebot', },
-          { text: 'How create page?', link: '/createpage' },
-        ]
-      },
-      {
-        text: 'Old (Deprecated)',
-        collapsed: true,
-        items: [
-          { text: 'SimpleCabinet', link: 'https://github.com/Cookie-cms/simplecabinet' },
-          { text: '1-beta', link: '/1-beta' },
-          { text: '2-beta', link: '/2-beta' }
-        ]
-      },
-      {
-        text: 'Things (Deprecated)',
-        collapsed: true,
-        items: [
-          { text: 'Template engine', link: '/things/templateengine' },
-          { text: 'Fixed 2d skin', link: '/things/2dskin' },
-          { text: 'Simple-code', link: '/things/simplecode' },
-          { text: 'Admin-access', link: '/things/adminaccess' }
-        ]
-      },
+          {
+            text: 'FAQ',
+            collapsed: true,
+            items: [
+              { text: 'How create page?', link: '/createpage' },
+              { text: 'How install private pkg?', link: '/package' },
+              { text: 'How change mail template?', link: '#' },
+
+            ]
+          },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Cookie-cms' },
