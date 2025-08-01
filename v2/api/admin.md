@@ -125,7 +125,7 @@ if you want give temporary role use [Update User Role](#update-user-role)
 
 
 
-## **Send Mail to All Users** <Badge type="warning" text="WIP" />
+## **Send Mail to All Users** <Badge type="warning" text="WIP" /> (Not planned yet)
 `POST /api/admin/mail`
 
 **Request Headers**:
@@ -185,11 +185,10 @@ This endpoint allows an admin to update the role level (`role_level`) of a user 
 
 ---
 
-## **Optional Expiry Field**:
+#### **Optional Expiry Field**:
 
 If the `expired_at` field is not provided, the role update will be permanent for the user. The expiry date must always be in the future if it is included.
 
----
 
 ## **Add user cape** <Badge type="warning" text="WIP" />
 
