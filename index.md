@@ -12,7 +12,7 @@ hero:
     #   link: https://cookiecms.coffeedev.dev/
     - theme: brand
       text: Wiki
-      link: /about
+      link: /v1/about
 
 
 features:
