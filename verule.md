@@ -2,7 +2,7 @@
 title: Version Rules
 ---
 
-## Version Rules
+## Version Rules 
 Управление версиями проекта: Документация для команды
 
 Общая схема версий:

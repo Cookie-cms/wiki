@@ -1,4 +1,4 @@
-## Linux/macOS
+## Linux/macOS <Badge type="info" text="not required" />
 
 ### 1. **Получение Personal Access Token (PAT)**
 
