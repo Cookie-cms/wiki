@@ -6,6 +6,7 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 export default withMermaid({
   title: "CookieCMS Wiki",
   description: "Wiki",
+  base: '/wiki/', 
   lastUpdated: true,
   ignoreDeadLinks: [
     /^https?:\/\/localhost/,
