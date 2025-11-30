@@ -22,39 +22,32 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-
+  
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
-
+  
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
+  
       - name: Install dependencies
         run: npm ci
-
+  
       - name: Build with VitePress
+        # Assuming npm run docs:build runs the build process correctly
+        # and that the output directory is correctly configured relative to the root.
         run: npm run docs:build
-
-      - name: Debug folders
-        run: |
-          echo "PWD: $(pwd)"
-          echo "ROOT DIR:"
-          ls -R .
-          echo "DOCS DIR:"
-          ls -R docs || true
-          echo ".vitepress DIR:"
-          ls -R docs/.vitepress || true
-          echo "DIST DIR:"
-          ls -R docs/.vitepress/dist || true
-
+  
+      # The problem was likely here: the path should be relative to the repository root.
+      # If your .vitepress folder is in the root, the output folder is .vitepress/dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
-
+          # CORRECTED PATH: Removed 'docs/' prefix, assuming .vitepress is in the repository root.
+          path: .vitepress/dist 
+  
   deploy:
     needs: build
     runs-on: ubuntu-latest
